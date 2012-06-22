@@ -4,6 +4,12 @@ Simple Play 1.2.4 App with a Job
 This little app shows how you can do simple one-off and scheduled jobs within Play 1.2.4 apps on Heroku.  These jobs run in separate processes from the Play 1 web server.
 
 
+## Running Locally
+
+
+    export DATABASE_URL=postgres://f:f@localhost/f
+    java -Dapplication.path=. -Dplay.id=prod -DlogLevel=INFO -cp lib/*:conf:/home/jamesw/play-1.2.4/framework/play-1.2.4.jar:/home/jamesw/play-1.2.4/framework/lib/*:tmp/classes jobs.HelloJob .
+
 ## Running on Heroku
 
 Clone this project locally:
