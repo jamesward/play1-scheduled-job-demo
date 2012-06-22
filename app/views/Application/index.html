@@ -1,0 +1,6 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+#{list items:models.Bar.findAll(), as:'bar' }
+        <li>${bar.name}</li>
+#{/list}
