@@ -8,6 +8,7 @@ This little app shows how you can do simple one-off and scheduled jobs within Pl
 
 
     export DATABASE_URL=postgres://f:f@localhost/f
+    play start --%prod
     java -Dapplication.path=. -Dplay.id=prod -DlogLevel=INFO -cp lib/*:conf:/home/jamesw/play-1.2.4/framework/play-1.2.4.jar:/home/jamesw/play-1.2.4/framework/lib/*:tmp/classes jobs.HelloJob .
 
 ## Running on Heroku
