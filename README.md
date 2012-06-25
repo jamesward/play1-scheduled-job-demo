@@ -9,7 +9,7 @@ This little app shows how you can do simple one-off and scheduled jobs within Pl
 
     export DATABASE_URL=postgres://f:f@localhost/f
     play start --%prod
-    java -Dapplication.path=. -Dplay.id=prod -DlogLevel=INFO -cp lib/*:conf:/home/jamesw/play-1.2.4/framework/play-1.2.4.jar:/home/jamesw/play-1.2.4/framework/lib/*:tmp/classes jobs.HelloJob .
+    java -Dapplication.path=. -Dplay.id=prod -DlogLevel=INFO -Dprecompiled=true -cp lib/*:conf:~/play-1.2.4/framework/play-1.2.4.jar:~/play-1.2.4/framework/lib/*:tmp/classes jobs.HelloJob .
 
 ## Running on Heroku
 
@@ -21,7 +21,7 @@ In the `play1-scheduled-job-demo` directory, create a new app on Heroku (make su
 belt.heroku.com) installed):
 
     $ heroku login
-    $ heroku create -s cedar
+    $ heroku create
 
 Push the app to Heroku:
 
